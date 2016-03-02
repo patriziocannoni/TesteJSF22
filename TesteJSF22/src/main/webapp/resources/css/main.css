@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+div {
+	padding: 10px;
+}
+
+.menu table tr td {
+	padding-right: 10px;
+}
+
+.lista table tbody tr td {
+	padding: 4px;
+}

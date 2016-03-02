@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<ui:composition template="/paginas/index.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:define name="conteudo">
+		<h:form>
+			<div>
+				Página 3
+			</div>
+			<div>
+				<h:inputTextarea value="#{questionarioMB.resposta}"/>
+			</div>
+			<div>
+				<h:commandButton action="#{questionarioMB.vaiPagina('resumo')}" value="Resumo"/>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
