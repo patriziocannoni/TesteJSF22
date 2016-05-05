@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<ui:composition template="/paginas/index.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:define name="conteudo">
+		<style type="text/css">
+			.number input {
+				text-align: right;
+			}
+		</style>
+	
+		<h:form>
+			<div class="container-fluid">
+				<div class="panel panel-default">
+					<div class="panel-body number">
+						<h:inputText value="#{numbersMB.number01}" /> / <h:inputText value="#{numbersMB.number02}" /> = <h:outputLabel value="#{numbersMB.result}"/>
+						<br/>
+						<h:commandButton action="#{numbersMB.calculateDivision}" value="Calcular" />
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
