@@ -1,6 +1,5 @@
 package testejsf22.view;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class QuestionarioMB extends BaseMB implements Serializable {
+public class QuestionarioMB extends BaseMB {
 
 	/**
 	 * Serial.
