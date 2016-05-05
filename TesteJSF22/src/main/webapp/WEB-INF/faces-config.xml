@@ -20,4 +20,10 @@
 		
 		<navigation-handler>testejsf22.controller.RedirectNavigationHandler</navigation-handler>
 	</application>
+	
+	<factory>
+		<exception-handler-factory>
+			testejsf22.utils.CustomExceptionHandlerFactory
+		</exception-handler-factory>
+	</factory>
 </faces-config>
