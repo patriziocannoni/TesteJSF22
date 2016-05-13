@@ -37,6 +37,8 @@ public class CustomExceptionHandler extends ExceptionHandlerWrapper {
             
             Throwable t = context.getException();
             
+            t.printStackTrace();
+            
             FacesContext.getCurrentInstance().addMessage("ERROR", new FacesMessage(t.getCause().getMessage()));
 		
             i.remove();
