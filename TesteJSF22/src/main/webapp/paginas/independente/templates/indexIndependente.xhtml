@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+		<title>#{msgs.tituloNavegador}</title>
+		
+		<!-- jQuery -->
+	    <h:outputScript library="js" name="jquery.min.js"/>
+	
+	    <!-- Bootstrap -->
+	    <h:outputScript library="js" name="bootstrap.min.js"/>
+		<h:outputStylesheet library="css" name="bootstrap.min.css"/>
+	
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	   	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</h:head>
+	
+	<h:body>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// ADD SLIDEDOWN ANIMATION TO DROPDOWN
+				$(".dropdown").on("show.bs.dropdown", function(e) {
+					$(this).find(".dropdown-menu").first().stop(true, true).slideDown(200);
+				});
+	
+				// ADD SLIDEUP ANIMATION TO DROPDOWN
+				$(".dropdown").on("hide.bs.dropdown", function(e) {
+					$(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+				});
+			});
+		</script>
+		
+		<div id="wrapper">
+		
+			<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    		<span class="sr-only">Toggle navigation</span>
+                    		<span class="icon-bar"></span>
+                    		<span class="icon-bar"></span>
+                    		<span class="icon-bar"></span>
+                		</button>
+                		<a class="navbar-brand" href="#">Brand</a>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+		                    <li><a href="#">Home</a></li>
+		                    <li><a href="#">Profile</a></li>
+		                    <li class="dropdown">
+		                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
+		                        <ul class="dropdown-menu">
+		                            <li><a href="#">Inbox</a></li>
+		                            <li><a href="#">Drafts</a></li>
+		                            <li><a href="#">Sent Items</a></li>
+		                            <li class="divider"></li>
+		                            <li><a href="#">Trash</a></li>
+		                        </ul>
+		                    </li>
+		                </ul>
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li class="dropdown">
+		                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+		                        <ul class="dropdown-menu">
+		                            <li><a href="#">Action</a></li>
+		                            <li><a href="#">Another action</a></li>
+		                            <li class="divider"></li>
+		                            <li><a href="#">Settings</a></li>
+		                        </ul>
+		                    </li>
+		                </ul>
+					</div>
+				</div>
+			</nav>
+		
+			<div id="page-wrapper">
+				<ui:insert name="conteudo"/>
+			</div>
+		</div>
+	</h:body>
+</html>
