@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                	<span class="sr-only">Toggle navigation</span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+                   <li><h:outputLink value="home.xhtml">Home</h:outputLink></li>
+                   <li><h:outputLink value="profile.xhtml">Profile</h:outputLink></li>
+                   <li class="dropdown">
+                       <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                           <li><a href="#">Inbox</a></li>
+                           <li><a href="#">Drafts</a></li>
+                           <li><a href="#">Sent Items</a></li>
+                           <li class="divider"></li>
+                           <li><a href="#">Trash</a></li>
+                       </ul>
+                   </li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                   <li class="dropdown">
+                       <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                           <li><a href="#">Action</a></li>
+                           <li><a href="#">Another action</a></li>
+                           <li class="divider"></li>
+                           <li><a href="#">Settings</a></li>
+                       </ul>
+                   </li>
+               </ul>
+		</div>
+	</nav>
+</html>
