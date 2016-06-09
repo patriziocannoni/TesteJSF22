@@ -1,2 +1,5 @@
 @CHARSET "UTF-8";
 
+.navbar {
+	border-radius: 0px !important;
+}
