@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * @author patrizio
@@ -25,6 +26,9 @@ public class Carro {
 
 	@Column
 	private Integer ano;
+	
+	@OneToOne(optional = true)
+	private CarroInfo carroInfo;
 
 	public Long getId() {
 		return id;
