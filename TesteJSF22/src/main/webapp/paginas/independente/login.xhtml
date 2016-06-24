@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<ui:composition template="/paginas/independente/templates/indexIndependente.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:define name="conteudo">
+
+		<h:outputStylesheet library="css" name="login.css"/>
+
+		<div class="container">
+			<h:form class="form-signin">
+				<div class="div-title-login">
+					<h3 class="form-signin-heading">Acesso ao Sistema</h3>
+				</div>
+				
+				<input type="email" id="inputEmail" class="form-control" placeholder="Edereço de email" />
+				
+				<input type="password" id="inputPassword" class="form-control" placeholder="Senha" />
+				
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="remember-me"/> Lembre-me
+					</label>
+				</div>
+				
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

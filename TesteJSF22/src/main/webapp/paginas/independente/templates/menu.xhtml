@@ -6,6 +6,7 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 	
 	<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+		<h:form>
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                	<span class="sr-only">Toggle navigation</span>
@@ -19,7 +20,9 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
           		<li><h:outputLink value="home.xhtml">Home</h:outputLink></li>
-          		<li><h:outputLink value="profile.xhtml">Profile</h:outputLink></li>
+          		
+          		
+          		<!--
           		<li class="dropdown">
               		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
             		<ul class="dropdown-menu">
@@ -30,16 +33,21 @@
                 		<li><a href="#">Trash</a></li>
                		</ul>
          		</li>
+         		-->
+         		
            		<li class="dropdown">
               		<a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                		<ul class="dropdown-menu">
-                   		<li><a href="#">Action</a></li>
-                 		<li><a href="#">Another action</a></li>
-                  		<li class="divider"></li>
-                    	<li><a href="#">Settings</a></li>
+               			<li><h:outputLink value="profile.xhtml">Perfil</h:outputLink></li>
+                    	<li><h:outputLink value="preferences.xhtml">Preferências</h:outputLink></li>
+                    	<li class="divider"></li>
+                    	<li><h:outputLink value="login.xhtml">Entrar</h:outputLink></li>
+                    	<li class="divider"></li>
+                    	<li><h:commandLink action="#{userSessionMB.logout}" value="#{msgs.logout}"/></li>
                 	</ul>
             	</li>
        		</ul>
 		</div>
+		</h:form>
 	</nav>
 </html>

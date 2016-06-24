@@ -1,5 +1,14 @@
 @CHARSET "UTF-8";
 
+body {
+  background-color: #f1f1f1;
+}
+
 .navbar {
 	border-radius: 0px !important;
+}
+
+.navbar-default {
+	background-color: #eaeaea !important;
+	border-color: #dadada !important;
 }
