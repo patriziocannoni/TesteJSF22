@@ -53,7 +53,7 @@
 	</servlet-mapping>
 
 	<welcome-file-list>
-		<welcome-file>paginas/home.xhtml</welcome-file>
+		<welcome-file>paginas/index.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<session-config>
