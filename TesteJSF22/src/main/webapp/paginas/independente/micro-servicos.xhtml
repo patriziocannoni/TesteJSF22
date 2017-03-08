@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<ui:composition template="/paginas/independente/templates/indexIndependente.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions">
+
+	<ui:define name="conteudo">
+		Micro Serviços
+		
+		<hr/>
+		
+		<h:form>
+			<div class="panel panel-default">
+				<div class="panel-body" style="font-size: .9em;">
+					<h:panelGroup id="memoryInfoPanel">
+						<ui:repeat var="data" value="#{microServicosMB.memoryInfo}">
+							#{data}
+							<br/>
+						</ui:repeat>
+					</h:panelGroup>
+				</div>
+			</div>
+			
+			<o:commandScript name="loadMemoryInfoData" render="memoryInfoPanel"/>
+			<script>setInterval(loadMemoryInfoData, 1000)</script>
+		</h:form>
+	</ui:define>
+</ui:composition>

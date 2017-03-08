@@ -62,6 +62,12 @@
 			<artifactId>jsf-impl</artifactId>
 			<version>${mojarra.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+		    <artifactId>omnifaces</artifactId>
+		    <version>1.14</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
