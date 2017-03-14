@@ -10,7 +10,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mojarra.version>2.2.13</mojarra.version>
+		<mojarra.version>2.2.14</mojarra.version>
 		<spring.version>4.1.7.RELEASE</spring.version>
 		<hibernate.version>4.3.10.Final</hibernate.version>
 	</properties>
