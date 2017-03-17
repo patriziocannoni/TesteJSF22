@@ -1,5 +1,6 @@
 package testejsf22.view;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -21,8 +22,19 @@ public class MicroServicosMB extends BaseMB {
 	@ManagedProperty(value = "#{memInfoService}")
 	private MemInfoService memInfoService;
 	
-	public List<String> getMemoryInfo() {
-		return memInfoService.getMemoryInfo().subList(0, 3);
+	private List<MemoryInfo> displayInformations = new ArrayList<>();
+	
+	public List<MemoryInfo> getMemoryInfo() {
+		List<MemoryInfo> list = memInfoService.getMemoryInfo();
+		if (displayInformations.isEmpty()) {
+			displayInformations.add(list.get(0));
+			displayInformations.add(list.get(1));
+		}
+		return displayInformations;
+	}
+	
+	public List<String> getDiskInfo() {
+		return memInfoService.getDiskInfo();
 	}
 
 	public MemInfoService getMemInfoService() {
