@@ -20,8 +20,7 @@ public class MemoryInfo {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return this.description + ": " + this.value;
 	}
 
 	public String getDescription() {
