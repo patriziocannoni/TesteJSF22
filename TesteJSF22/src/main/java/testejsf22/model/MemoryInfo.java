@@ -1,7 +1,7 @@
 /**
  * 
  */
-package testejsf22.view;
+package testejsf22.model;
 
 /**
  * @author patrizio

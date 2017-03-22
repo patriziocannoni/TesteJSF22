@@ -7,6 +7,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
+import testejsf22.model.MemoryInfo;
 import testejsf22.service.MemInfoService;
 
 /**

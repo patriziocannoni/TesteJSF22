@@ -14,8 +14,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import testejsf22.model.MemoryInfo;
 import testejsf22.service.MemInfoService;
-import testejsf22.view.MemoryInfo;
 
 /**
  * @author patrizio
