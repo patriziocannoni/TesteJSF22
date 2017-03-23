@@ -18,12 +18,12 @@
 		
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 		
-		<navigation-handler>testejsf22.controller.RedirectNavigationHandler</navigation-handler>
+		<navigation-handler>br.com.cannoni.testejsf22.controller.RedirectNavigationHandler</navigation-handler>
 	</application>
 	
 	<factory>
 		<exception-handler-factory>
-			testejsf22.utils.CustomExceptionHandlerFactory
+			br.com.cannoni.testejsf22.utils.CustomExceptionHandlerFactory
 		</exception-handler-factory>
 	</factory>
 </faces-config>

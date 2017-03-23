@@ -10,7 +10,7 @@
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="testejsf22" />
+	<context:component-scan base-package="br.com.cannoni" />
 
 	<bean id="persistencePropertyPlaceholderConfigurer"
 			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -37,7 +37,7 @@
 	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="jdbcDataSource"/>
-		<property name="packagesToScan" value="testejsf22.model"/>
+		<property name="packagesToScan" value="br.com.cannoni.testejsf22.model"/>
 		<property name="hibernateProperties">
 		    <props>
 		    	<prop key="hibernate.session_factory_name">TesteJSF22SessionFactory</prop>
