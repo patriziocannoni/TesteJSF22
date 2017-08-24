@@ -16,6 +16,8 @@
 			<var>msgs</var>
 		</resource-bundle>
 		
+		<resource-handler>br.com.cannoni.testejsf22.controller.CacheControlResourceHandler</resource-handler>
+		
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 		
 		<navigation-handler>br.com.cannoni.testejsf22.controller.RedirectNavigationHandler</navigation-handler>
