@@ -7,21 +7,52 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 	<ui:define name="conteudo">
-		<div>
-			Lista de Carros
+		<div class="row">
+			<h:form styleClass="form">
+				<table class="table table-bordered">
+					<tr>
+						<td>Marca:</td><td><h:inputText value="#{carrosMB.carro.marca}" styleClass="form-control"/></td>
+					</tr>
+					<tr>
+						<td>Modelo:</td><td><h:inputText value="#{carrosMB.carro.modelo}" styleClass="form-control"/></td>
+					</tr>
+					<tr>
+						<td>Ano:</td><td><h:inputText value="#{carrosMB.carro.ano}" styleClass="form-control"/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><h:commandButton action="#{carrosMB.inserirCarro()}" value="Ok" styleClass="btn btn-default"/></td>
+					</tr>
+				</table>
+			</h:form>
 		</div>
-		<div class="lista">
-			<h:dataTable value="#{carrosMB.carros}" var="carro">
-				<h:column>
-					#{carro.marca}
-				</h:column>
-				<h:column>
-					#{carro.modelo}
-				</h:column>
-				<h:column>
-					#{carro.ano}
-				</h:column>
-			</h:dataTable>
+		<div class="row">
+			<div>
+				Lista de Carros
+			</div>
+			<div class="lista">
+				<h:dataTable value="#{carrosMB.carros}" var="carro" styleClass="table table-striped table-bordered">
+					<h:column>
+						<f:facet name="header">ID</f:facet>
+						#{carro.id}
+					</h:column>
+					<h:column>
+						<f:facet name="header">MARCA</f:facet>
+						#{carro.marca}
+					</h:column>
+					<h:column>
+						<f:facet name="header">MODELO</f:facet>
+						#{carro.modelo}
+					</h:column>
+					<h:column>
+						<f:facet name="header">ANO</f:facet>
+						#{carro.ano}
+					</h:column>
+					<h:column>
+						<f:facet name="header">COR</f:facet>
+						#{carro.carroInfo.cor}
+					</h:column>
+				</h:dataTable>
+			</div>
 		</div>
 	</ui:define>
 </ui:composition>

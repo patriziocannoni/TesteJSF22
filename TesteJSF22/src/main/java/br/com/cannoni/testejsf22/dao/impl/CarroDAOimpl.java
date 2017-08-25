@@ -22,22 +22,21 @@ public class CarroDAOimpl implements CarroDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	/**
-	 * Construtor.
-	 */
-	public CarroDAOimpl() {
-		super();
-	}
-
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Carro> obterCarros() {
 		List<Carro> carros;
 
 		Session session = sessionFactory.getCurrentSession();
-		carros = (List<Carro>) session.createCriteria(Carro.class).list();
+		carros = (List<Carro>) session.createQuery("from Carro c left join fetch c.carroInfo").list();
 
 		return carros;
+	}
+	
+	@Override
+	public void inserirCarro(Carro carro) {
+		Session session = sessionFactory.getCurrentSession();
+		session.save(carro);
 	}
 
 }

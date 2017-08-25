@@ -24,18 +24,34 @@ public class CarrosMB extends BaseMB {
 	private CarroDAO carroDAO;
 
 	private List<Carro> carros;
+	
+	private Carro carro;
 
 	@PostConstruct
 	private void init() {
+		carro = new Carro();
 		carros = carroDAO.obterCarros();
 	}
 
 	public List<Carro> getCarros() {
 		return carros;
 	}
+	
+	public String inserirCarro() {
+		carroDAO.inserirCarro(carro);
+		return null;
+	}
 
+	public Carro getCarro() {
+		return carro;
+	}
+
+	public void setCarro(Carro carro) {
+		this.carro = carro;
+	}
+	
 	public void setCarroDAO(CarroDAO carroDAO) {
 		this.carroDAO = carroDAO;
 	}
-
+	
 }

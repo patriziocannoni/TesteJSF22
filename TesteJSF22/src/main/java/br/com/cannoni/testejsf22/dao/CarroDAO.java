@@ -11,5 +11,7 @@ import br.com.cannoni.testejsf22.model.Carro;
 public interface CarroDAO {
 
 	List<Carro> obterCarros();
+	
+	void inserirCarro(Carro carro);
 
 }
