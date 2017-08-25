@@ -2,7 +2,6 @@ package br.com.cannoni.testejsf22.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,7 +27,7 @@ public class Carro {
 	@Column(nullable = false)
 	private Integer ano;
 	
-	@OneToOne(optional = true, fetch = FetchType.EAGER)
+	@OneToOne(optional = true)
 	private CarroInfo carroInfo;
 
 	public Long getId() {
