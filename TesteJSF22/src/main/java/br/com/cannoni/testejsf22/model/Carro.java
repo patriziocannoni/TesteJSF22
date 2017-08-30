@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 /**
  * @author patrizio
@@ -27,8 +26,11 @@ public class Carro {
 	@Column(nullable = false)
 	private Integer ano;
 	
-	@OneToOne(optional = true)
-	private CarroInfo carroInfo;
+	@Column
+    private String cor;
+    
+    @Column
+    private Integer kilometragem;
 
 	public Long getId() {
 		return id;
@@ -62,12 +64,20 @@ public class Carro {
 		this.ano = ano;
 	}
 
-	public CarroInfo getCarroInfo() {
-		return carroInfo;
+	public String getCor() {
+		return cor;
 	}
 
-	public void setCarroInfo(CarroInfo carroInfo) {
-		this.carroInfo = carroInfo;
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public Integer getKilometragem() {
+		return kilometragem;
+	}
+
+	public void setKilometragem(Integer kilometragem) {
+		this.kilometragem = kilometragem;
 	}
 
 }
